@@ -1,0 +1,17 @@
+ALGORITHM palindrome
+VAR
+    word : STRING;
+    left : INTEGER := 0;
+    right : INTEGER := length(word);
+BEGIN
+    FUNCTION palindrome(word,left,right) : BOOLEAN
+    BEGIN
+        if left >= len(word):
+            RETURN True
+    
+        if word[left] != word[len(word)]:
+            RETURN False
+
+        RETURN palindrome(word,left + 1, len(word) - 1);
+    END
+END
